@@ -23,7 +23,7 @@ async function getResults(url) {
     .then((response) => response.text())
     .then((str) => new window.DOMParser().parseFromString(str, "text/html"))
     .then((data) => {
-      const items = data.querySelectorAll("entry");
+      const items = [...data.querySelectorAll("entry"), ...data.querySelectorAll("item")];
       return Array.prototype.map.call(items, (el) => ({
         link: el.querySelector("link").getAttribute("href"),
         title: el.querySelector("title").innerHTML
