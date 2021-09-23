@@ -1,4 +1,4 @@
-const CORS_PROXY = `https://thingproxy.freeboard.io/fetch/`;
+const CORS_PROXY = `https://nameless-cove-86294.herokuapp.com/`;
 const RSS_URL = `https://www.google.com/alerts/feeds/15643140499855247148/8570744880942554774`;
 
 fetch(CORS_PROXY + RSS_URL)
