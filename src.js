@@ -25,7 +25,7 @@ async function getResults(url) {
     .then((data) => {
       const items = [...data.querySelectorAll("entry"), ...data.querySelectorAll("item")];
       return Array.prototype.map.call(items, (el) => ({
-        link: el.querySelector("link").getAttribute("href"),
+        link: el.querySelector("link").getAttribute("href") || el.querySelector("link").innerText,
         title: el.querySelector("title").innerHTML
       }));
     });
