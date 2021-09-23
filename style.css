@@ -4,6 +4,10 @@ body {
   font-size: 12px;
   color: #e3e4e4;
   margin: 0;
+  padding: 0;
+}
+
+#grid {
   padding: 0 16px;
   box-sizing: border-box;
   display: grid;
@@ -31,4 +35,25 @@ article {
   background: rgb(63, 68, 71);
   padding: 10px;
   cursor: pointer;
+}
+
+label {
+  margin: 16px 0 16px 16px;
+}
+
+#rss-url {
+  margin: 16px;
+  width: 40em;
+}
+
+#embed-url-container {
+  margin: 0 0 16px 16px;
+}
+
+#editor {
+  display: none;
+}
+
+#editor.visible {
+  display: block;
 }
